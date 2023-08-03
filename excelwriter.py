@@ -127,37 +127,35 @@ def start():
     k = 0
     new_row = 2
     # inserting values to excel
-while(new_row < len(excluded) + 2):
-    insert_to_excel(excluded[k], new_row, excluded_Column)
+while(new_row < len(group_code) + 2):  # Assuming group_code list has same length as all varying data
+    insert_to_excel("FALSE", new_row, excluded_Column)  # Constant value
     insert_to_excel(group_code[k], new_row, group_code_Column)
     insert_to_excel(group_description[k], new_row, group_description_Column)
     insert_to_excel(desc[k], new_row, desc_Column)
-    insert_to_excel(age[k], new_row, age_Column)
-    insert_to_excel(condition[k], new_row, condition_Column)
+    insert_to_excel("0", new_row, age_Column)  # Constant value
+    insert_to_excel("Average", new_row, condition_Column)  # Constant value
     insert_to_excel(qty[k], new_row, qty_Column)
     insert_to_excel(item_amount[k], new_row, item_amount_Column)
     insert_to_excel(unit[k], new_row, unit_Column)
-    insert_to_excel(reported_cost[k], new_row, reported_cost_Column)
+    insert_to_excel("0", new_row, reported_cost_Column)  # Constant value
     insert_to_excel(unit_cost[k], new_row, unit_cost_Column)
     insert_to_excel(coverage[k], new_row, coverage_Column)
     insert_to_excel(sales_tax[k], new_row, sales_tax_Column)
     insert_to_excel(rcv[k], new_row, rcv_Column)
     insert_to_excel(life[k], new_row, life_Column)
-    insert_to_excel(depreciation_type[k], new_row, depreciation_type_Column)
-    insert_to_excel(depreciation_amount[k], new_row, depreciation_amount_Column)
-    insert_to_excel(recoverable[k], new_row, recoverable_Column)
+    insert_to_excel("0", new_row, depreciation_amount_Column)  # Constant value
+    insert_to_excel("Yes", new_row, recoverable_Column)  # Constant value
     insert_to_excel(acv[k], new_row, acv_Column)
-    insert_to_excel(tax[k], new_row, tax_Column)
-    insert_to_excel(replace[k], new_row, replace_Column)
+    insert_to_excel("Yes", new_row, tax_Column)  # Constant value
+    insert_to_excel("No", new_row, replace_Column)  # Constant value
     insert_to_excel(cat[k], new_row, cat_Column)
     insert_to_excel(sel[k], new_row, sel_Column)
-    insert_to_excel(owner[k], new_row, owner_Column)
-    insert_to_excel(original_vendor[k], new_row, original_vendor_Column)
+    insert_to_excel("VERTEXIL", new_row, owner_Column)  # Constant value
+    insert_to_excel("", new_row, original_vendor_Column)  # Constant value (blank)
     insert_to_excel(date[k], new_row, date_Column)
     insert_to_excel(note_1[k], new_row, note_1_Column)
     new_row += 1
     k += 1
-
 start()
 
 
